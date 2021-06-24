@@ -31,13 +31,12 @@ function App() {
     <div className="App">
       <header className="App-header">
       <img src={StepZenLogo} alt="StepZen Logo" width="200px"/>
-      Capsule information pulled from StepZen Endpoint:
+      <p style={{marginTop: "40px"}}>Capsule information pulled from StepZen Endpoint:</p>
         <p>
-          id :{data.capsule.id}
-          </p><p>
           <ul>
-          <li>landings- {data.capsule.landings}</li>
-          <li>reuse-count- {data.capsule.reuse_count}</li>
+            <li>id: {data.capsule.id}</li>
+          <li>landings: {data.capsule.landings}</li>
+          <li>reuse-count: {data.capsule.reuse_count}</li>
           </ul>
         </p>
       </header>
