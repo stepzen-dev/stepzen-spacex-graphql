@@ -1,7 +1,6 @@
-
 import './App.css';
 import { gql, useQuery } from '@apollo/client';
-
+import StepZenLogo from './light-blue.svg';
 const GET_QUERY = gql`
   query MyQuery   {
     capsule(id: "C105") {
@@ -31,21 +30,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <img src={StepZenLogo} alt="StepZen Logo" width="200px"/>
         <p>
           id :{data.capsule.id}
           </p><p>
-          landings: {data.capsule.landings}
-          {data.capsule.original_launch}
-          {data.capsule.reuse_count}
+          Capsule information pulled from StepZen Endpoint:
+          <ul>
+          <li>landings- {data.capsule.landings}</li>
+          <li>reuse-count- {data.capsule.reuse_count}</li>
+          </ul>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
