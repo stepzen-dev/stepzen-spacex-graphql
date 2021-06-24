@@ -31,10 +31,10 @@ function App() {
     <div className="App">
       <header className="App-header">
       <img src={StepZenLogo} alt="StepZen Logo" width="200px"/>
+      Capsule information pulled from StepZen Endpoint:
         <p>
           id :{data.capsule.id}
           </p><p>
-          Capsule information pulled from StepZen Endpoint:
           <ul>
           <li>landings- {data.capsule.landings}</li>
           <li>reuse-count- {data.capsule.reuse_count}</li>
