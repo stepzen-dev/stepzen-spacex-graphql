@@ -7,7 +7,7 @@ This project is a React app spun up with a StepZen connection to SpaceX's GraphQ
 
 Before you get started, you'll need to get yourself a [StepZen account](https://stepzen.com/request-invite) and [install the StepZen CLI](https://stepzen.com/docs/quick-start).
 
-If you'd like to contribute, please view our [guidelines](https://github.com/stepzen-samples/stepzen-spacex-graphql/blob/main/CONTRIBUTING_FOR_HACKTOBERFEST.md) and [code of conduct](https://github.com/stepzen-samples/stepzen-spacex-graphql/blob/main/CODE_OF_CONDUCT.md) first. 
+If you'd like to contribute, please view our [guidelines](https://github.com/stepzen-samples/stepzen-spacex-graphql/blob/main/CONTRIBUTING_FOR_HACKTOBERFEST.md) and [code of conduct](https://github.com/stepzen-samples/stepzen-spacex-graphql/blob/main/CODE_OF_CONDUCT.md) first, as well as where to [find support](https://github.com/stepzen-samples/stepzen-spacex-graphql/blob/main/SUPPORT.md).
 
 ## Getting Started 
 
