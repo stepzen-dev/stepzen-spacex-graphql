@@ -11,11 +11,7 @@ If you'd like to contribute, please view our [guidelines](https://github.com/ste
 
 ## Getting Started 
 
-Run  
-
-```git clone https://github.com/stepzen-samples/stepzen-spacex-graphql.git && cd stepzen-spacex-graphql && code .```  
-
-to open up the project in your IDE.
+Fork and clone to open up the project in your IDE (coding environment).
 
 Then `npm install`. 
 
