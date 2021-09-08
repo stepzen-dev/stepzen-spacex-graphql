@@ -29,5 +29,7 @@ We recommend following the steps in [this guide](https://www.dataschool.io/how-t
 Stuck? Lonely? Comment on the issue that you're resolving and ask us to pair! We've got time set aside on our Calendlys this month!
 calendly.com/lucia-stepzen
 
+We'll be able to get back within 24 business hrs during Hacktoberfest 2021.
+
 ## Learn More
 You can learn more in the [StepZen documentation](https://stepzen.com/docs).
