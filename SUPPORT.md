@@ -5,3 +5,5 @@ Book a meeting at my calendly for a chat or for pairing: https://calendly.com/lu
 Or email us
 
 I'll be able to get back within 24 business hrs during Hacktoberfest 2021.
+
+To learn more about Hacktoberfest, see Digital Ocean's [site](https://hacktoberfest.digitalocean.com/).
