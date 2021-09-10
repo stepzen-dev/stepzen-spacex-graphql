@@ -2,8 +2,6 @@
 
 <img width="700" alt="Screen Shot 2021-06-24 at 10 57 36 AM" src="https://user-images.githubusercontent.com/54046179/123310554-0d3d9c80-d4db-11eb-98c2-a54e7d75e523.png">
 
-Hello from Lucia!
-
 This project is a React app spun up with a StepZen connection to SpaceX's GraphQL API. It demonstrates how you can create a StepZen layer for a GraphQL API with a React frontend.
 
 Before you get started, you'll need to get yourself a [StepZen account](https://stepzen.com/request-invite) and [install the StepZen CLI](https://stepzen.com/docs/quick-start).
