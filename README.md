@@ -8,6 +8,8 @@ Before you get started, you'll need to get yourself a [StepZen account](https://
 
 If you'd like to contribute, please view our [guidelines](https://github.com/stepzen-samples/stepzen-spacex-graphql/blob/main/CONTRIBUTING_FOR_HACKTOBERFEST.md) and [code of conduct](https://github.com/stepzen-samples/stepzen-spacex-graphql/blob/main/CODE_OF_CONDUCT.md) first, as well as where to [find support](https://github.com/stepzen-samples/stepzen-spacex-graphql/blob/main/SUPPORT.md).
 
+Here's our video walkthrough as well. In it, you'll [learn the steps for making a PR](https://www.youtube.com/watch?v=4B6xVyEc_CY&t=1285s) and the overall goals for our repos.
+
 ## Getting Started
 
 Fork and clone to open up the project in your IDE (coding environment).
