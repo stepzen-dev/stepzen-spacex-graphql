@@ -16,6 +16,8 @@ Fork and clone to open up the project in your IDE (coding environment).
 
 Then `npm install`.
 
+Then `cp .env.example .env`.
+
 Run `stepzen start`.
 
 You'll get a message like:
@@ -34,12 +36,7 @@ You'll also first notice a custom StepZen Graphiql editor pop up. I encourage yo
 
 <img width="1597" alt="Screen Shot 2021-06-24 at 10 39 22 AM" src="https://user-images.githubusercontent.com/54046179/123308449-88518380-d4d8-11eb-983c-ac71326a4e0f.png">
 
-You'll need to add something for the app to work in localhost, a .env in your working directory with the content:
-
-```
-REACT_APP_STEPZEN_API_KEY={{STEPZEN_API_KEY}}
-REACT_APP_STEPZEN_ENDPOINT={{STEPZEN_ENDPOINT}}
-```
+You'll need to add STEPZEN_API_KEY and STEPZEN_ENDPOINT in .env file in your working directory for the app to work in localhost.
 
 The STEPZEN_API_KEY is the key from your account, and the STEPZEN_ENDPOINT is the endpoint you got when you ran `stepzen start`.
 
