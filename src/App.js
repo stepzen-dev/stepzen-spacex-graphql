@@ -65,13 +65,11 @@ function Home() {
         <header className="App-header">
           <img src={StepZenLogo} alt="StepZen Logo" width="200px" />
           <p style={{ marginTop: "40px" }}>Capsule information pulled from StepZen Endpoint:</p>
-          <p>
             <ul>
               <li>id: {data.capsule.id}</li>
               <li>landings: {data.capsule.landings}</li>
               <li>reuse-count: {data.capsule.reuse_count}</li>
             </ul>
-          </p>
           <Link to='/rockets'>Rockets Information</Link>
         </header>
       </div>
