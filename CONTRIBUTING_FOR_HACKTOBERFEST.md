@@ -7,7 +7,7 @@ Here are some things to keep in mind before you begin.
 ## PRs We Are Looking For
 
 To avoid receiving an _invalid_ or _spam_ label on your PR, please:
-1. comment on and claim an issue that is already present on the repo. We ask that you ask to claim one issue at a time. 
+1. comment on and claim an issue that is already present on the repo. We ask that you ask to claim one issue at a time. We will not be assigning multiple issues at once to one person.
 2. or create an issue for us to review that your PR will resolve, before you make the PR
 
 Then link to the issue in your PR. 
