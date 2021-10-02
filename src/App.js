@@ -1,7 +1,7 @@
 import './App.css';
 import { gql, useQuery } from '@apollo/client';
 import StepZenLogo from './light-blue.svg';
-const GET_QUERY = gql`
+export const GET_QUERY = gql`
   query MyQuery   {
     capsule(id: "C105") {
       id

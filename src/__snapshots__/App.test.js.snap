@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders app screen 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <img
+        alt="StepZen Logo"
+        src="light-blue.svg"
+        width="200px"
+      />
+      <p
+        style="margin-top: 40px;"
+      >
+        Capsule information pulled from StepZen Endpoint:
+      </p>
+      <p />
+      <ul>
+        <li>
+          id: 1
+        </li>
+        <li>
+          landings: 0
+        </li>
+        <li>
+          reuse-count: 0
+        </li>
+      </ul>
+      <p />
+    </header>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`renders error screen 1`] = `
+<DocumentFragment>
+  <pre>
+    {
+  "graphQLErrors": [],
+  "networkError": {},
+  "message": "A test error occurred"
+}
+  </pre>
+</DocumentFragment>
+`;
+
+exports[`renders loading screen 1`] = `
+<DocumentFragment>
+  <p>
+    Loading ...
+  </p>
+</DocumentFragment>
+`;
