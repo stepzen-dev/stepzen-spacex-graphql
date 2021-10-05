@@ -16,7 +16,7 @@ Fork and clone to open up the project in your IDE (coding environment).
 
 Then `npm install`.
 
-Then `cp .env.example .env`.
+Then `cp .env.sample .env`.
 
 Run `stepzen start`.
 
