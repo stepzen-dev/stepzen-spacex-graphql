@@ -34,7 +34,7 @@ function Rockets() {
         <div className="App">
             <header className="App-header">
                 <img src={StepZenLogo} alt="StepZen Logo" width="200px" />
-                <p style={{ marginTop: "40px" }}>Top 10 Rockets information:</p>
+                <p style={{ marginTop: "40px" }}>Top 5 Rockets information:</p>
                 <ul>
                     {listitems}
                 </ul>
