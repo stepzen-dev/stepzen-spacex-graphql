@@ -3,7 +3,7 @@ import { gql, useQuery } from '@apollo/client';
 import StepZenLogo from '../light-blue.svg';
 const GET_QUERY = gql`
   query MyQuery   {
-    rockets(offset: 0, limit: 100) {
+    rockets(limit: 5) {
         id
         name
         mass {
