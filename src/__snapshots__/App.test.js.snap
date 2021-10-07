@@ -2,56 +2,74 @@
 
 exports[`renders app screen 1`] = `
 <DocumentFragment>
-  <div
-    class="App"
-  >
-    <header
-      class="App-header"
+  <div>
+    <nav>
+      <ul />
+    </nav>
+    <div
+      class="App"
     >
-      <img
-        alt="StepZen Logo"
-        src="light-blue.svg"
-        width="200px"
-      />
-      <p
-        style="margin-top: 40px;"
+      <header
+        class="App-header"
       >
-        Capsule information pulled from StepZen Endpoint:
-      </p>
-      <p />
-      <ul>
-        <li>
-          id: 1
-        </li>
-        <li>
-          landings: 0
-        </li>
-        <li>
-          reuse-count: 0
-        </li>
-      </ul>
-      <p />
-    </header>
+        <img
+          alt="StepZen Logo"
+          src="light-blue.svg"
+          width="200px"
+        />
+        <p
+          style="margin-top: 40px;"
+        >
+          Capsule information pulled from StepZen Endpoint:
+        </p>
+        <ul>
+          <li>
+            id: 1
+          </li>
+          <li>
+            landings: 0
+          </li>
+          <li>
+            reuse-count: 0
+          </li>
+        </ul>
+        <a
+          href="/rockets"
+        >
+          Rockets Information
+        </a>
+      </header>
+    </div>
   </div>
 </DocumentFragment>
 `;
 
 exports[`renders error screen 1`] = `
 <DocumentFragment>
-  <pre>
-    {
+  <div>
+    <nav>
+      <ul />
+    </nav>
+    <pre>
+      {
   "graphQLErrors": [],
   "networkError": {},
   "message": "A test error occurred"
 }
-  </pre>
+    </pre>
+  </div>
 </DocumentFragment>
 `;
 
 exports[`renders loading screen 1`] = `
 <DocumentFragment>
-  <p>
-    Loading ...
-  </p>
+  <div>
+    <nav>
+      <ul />
+    </nav>
+    <p>
+      Loading ...
+    </p>
+  </div>
 </DocumentFragment>
 `;
