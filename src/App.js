@@ -4,7 +4,7 @@ import StepZenLogo from './light-blue.svg';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Rockets from './rocket-information';
 
-const GET_QUERY = gql`
+export const GET_QUERY = gql`
   query MyQuery   {
     capsule(id: "C105") {
       id
