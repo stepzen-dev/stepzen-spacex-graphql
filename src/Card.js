@@ -1,7 +1,7 @@
-import "./App.css";
+import "./Card.css";
 
 const Card = (props) => {
-  const classes = "card " + props.className;
+  const classes = "Card " + props.className;
   return <div className={classes}>{props.children}</div>;
 };
 

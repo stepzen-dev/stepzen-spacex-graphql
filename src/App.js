@@ -58,11 +58,13 @@ function Home() {
   if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
   return (
     <>
-      <Card>
+      <Card className="App App-header">
         <div className="App">
           <header className="App-header">
             <img src={StepZenLogo} alt="StepZen Logo" width="200px" />
-            <p style={{ marginTop: "40px" }}>Capsule information pulled from StepZen Endpoint:</p>
+            <h2 className="Heading-description" style={{ marginTop: "40px" }}>
+              Capsule information pulled from StepZen Endpoint:
+            </h2>
             <span>id: {data.capsule.id}</span>
             <span>landings: {data.capsule.landings}</span>
             <span>reuse-count: {data.capsule.reuse_count}</span>
