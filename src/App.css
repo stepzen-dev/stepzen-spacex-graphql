@@ -1,6 +1,7 @@
 .App {
-  text-align: center;
-}
+    text-align: center;
+    /*padding: 1rem;*/
+    }
 
 .App-logo {
   height: 40vmin;
@@ -14,7 +15,7 @@
 }
 
 .App-header {
-  background-color: white;
+  background-color: #DDD;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -40,4 +41,4 @@
 .card {
     border-radius: 12px;
     /*box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);*/
-}
+    }
