@@ -62,9 +62,7 @@ function Home() {
         <div className="App">
           <header className="App-header">
             <img src={StepZenLogo} alt="StepZen Logo" width="200px" />
-            <h2 className="Heading-description" style={{ marginTop: "40px" }}>
-              Capsule information pulled from StepZen Endpoint:
-            </h2>
+            <h2 style={{ marginTop: "40px" }}>Capsule information pulled from StepZen Endpoint:</h2>
             <span>id: {data.capsule.id}</span>
             <span>landings: {data.capsule.landings}</span>
             <span>reuse-count: {data.capsule.reuse_count}</span>
