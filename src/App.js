@@ -57,22 +57,18 @@ function Home() {
 
   if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
   return (
-    <>
-      <Card className="App App-header">
-        <div className="App">
-          <header className="App-header">
-            <img src={StepZenLogo} alt="StepZen Logo" width="200px" />
-            <h2 style={{ marginTop: "40px" }}>Capsule information pulled from StepZen Endpoint:</h2>
-            <span className="Data">id: {data.capsule.id}</span>
-            <span className="Data">landings: {data.capsule.landings}</span>
-            <span className="Data">reuse-count: {data.capsule.reuse_count}</span>
-            <Link to="/rockets" className="Data">
-              Rockets Information
-            </Link>
-          </header>
-        </div>
-      </Card>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <img src={StepZenLogo} alt="StepZen Logo" width="300px" />
+        <h2 style={{ marginTop: "40px" }}>Capsule information pulled from StepZen Endpoint:</h2>
+        <span className="Data">id: {data.capsule.id}</span>
+        <span className="Data">landings: {data.capsule.landings}</span>
+        <span className="Data">reuse-count: {data.capsule.reuse_count}</span>
+        <Link to="/rockets" className="Data">
+          Rockets Information
+        </Link>
+      </header>
+    </div>
   );
 }
 export default App;

@@ -24,9 +24,9 @@
   font-size: calc(10px + 2vmin);
   color: #DDD; /*originally DarkSlateBlue*/
   /*margin: 2rem auto;*/
-  border-radius: 12px;
-  border: 2px solid black; /*change this when all styling has been finalized*/
-  padding: 2rem;
+  /*border-radius: 12px;*/
+  /*border: 2px solid black;*/ /*change this when all styling has been finalized*/
+  padding: 1rem;
   
  }
 
