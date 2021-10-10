@@ -61,12 +61,17 @@ function Home() {
       <header className="App-header">
         <img src={StepZenLogo} alt="StepZen Logo" width="300px" />
         <h2 style={{ marginTop: "40px" }}>Capsule information pulled from StepZen Endpoint:</h2>
-        <span className="Data">id: {data.capsule.id}</span>
-        <span className="Data">landings: {data.capsule.landings}</span>
-        <span className="Data">reuse-count: {data.capsule.reuse_count}</span>
-        <Link to="/rockets" className="Data">
-          Rockets Information
-        </Link>
+        <Card>
+          <span className="Data">id: {data.capsule.id}</span>
+          <br></br>
+          <span className="Data">landings: {data.capsule.landings}</span>
+          <br></br>
+          <span className="Data">reuse-count: {data.capsule.reuse_count}</span>
+          <br></br>
+          <Link to="/rockets" className="Data">
+            Rockets Information
+          </Link>
+        </Card>
       </header>
     </div>
   );
