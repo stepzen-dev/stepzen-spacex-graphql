@@ -15,16 +15,18 @@
 }
 
 .App-header {
-  background-color: #4B4B4B; /*change back to #DDD or #D4C2E4 when finished styling*/
+  background-color: #4B4B4B; /*change back to #DDD or #D4C2E4 or DarkSlateBlue when finished styling*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: DarkSlateBlue;
+  color: #DDD; /*originally DarkSlateBlue*/
   /*margin: 2rem auto;*/
   border-radius: 12px;
+  border: 2px solid black; /*change this when all styling has been finalized*/
+  padding: 2rem;
   
  }
 
@@ -45,3 +47,8 @@
 /*.Heading-description {
     font-size: 1.25rem;
 }*/
+
+.Data {
+    font-weight: bold;
+   
+}
