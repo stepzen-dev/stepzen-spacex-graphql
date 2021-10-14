@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Rockets from "./rocket-information";
 import Card from "./Card";
 
-const GET_QUERY = gql`
+export const GET_QUERY = gql`
   query MyQuery {
     capsule(id: "C105") {
       id
