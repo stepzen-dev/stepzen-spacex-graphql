@@ -1,6 +1,6 @@
 .App {
-  text-align: center;
-}
+    text-align: center;
+   }
 
 .App-logo {
   height: 40vmin;
@@ -14,15 +14,17 @@
 }
 
 .App-header {
-  background-color: white;
+  background-color: #19253F; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: DarkSlateBlue;
-}
+  color: #DDD;
+  padding: 1rem;
+  
+ }
 
 .App-link {
   color: #61dafb;
@@ -35,4 +37,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Data {
+    font-weight: bold;
+   
 }
