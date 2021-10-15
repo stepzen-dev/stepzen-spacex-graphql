@@ -4,17 +4,19 @@ import StepZenLogo from "./light-blue.svg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Rockets from "./rocket-information";
 import Card from "./Card";
+import CardList from "./CardList";
+
 
 const GET_QUERY = gql`
-  query MyQuery {
-    capsule(id: "C105") {
+  query launchesQuery {
+    launchesPast(limit: 5) {
       id
-      landings
-      original_launch
-      reuse_count
-      missions {
-        flight
-        name
+      mission_name
+      launch_site {
+        site_name
+      }
+      rocket {
+        rocket_name        
       }
     }
   }
@@ -51,27 +53,32 @@ function App() {
 
 function Home() {
   const { loading, error, data } = useQuery(GET_QUERY);
-  console.log("DATA", data);
+  console.log(data)
 
   if (loading) return <p>Loading ...</p>;
 
-  if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
+  if (error) return <pre>ERROR: {JSON.stringify(error, null, 2)}</pre>;
   return (
     <div className="App">
       <header className="App-header">
         <img src={StepZenLogo} alt="StepZen Logo" width="300px" />
-        <h2 style={{ marginTop: "40px" }}>Capsule information pulled from StepZen Endpoint:</h2>
-        <Card>
-          <span className="Data">id: {data.capsule.id}</span>
-          <br></br>
-          <span className="Data">landings: {data.capsule.landings}</span>
-          <br></br>
-          <span className="Data">reuse-count: {data.capsule.reuse_count}</span>
-          <br></br>
-          <Link to="/rockets" className="Data">
-            Rockets Information
-          </Link>
-        </Card>
+        <h2 style={{ marginTop: "40px" }}>Latest launches information pulled from StepZen Endpoint:</h2>
+        <CardList>
+          {data.launchesPast.map(launch => (
+            <Card key={launch.id}>
+              <b className="Title">{launch.mission_name}</b>
+              <br />
+              <p className="Description">
+                Launched from {launch.launch_site.site_name}. <br />
+                Used rocket {launch.rocket.rocket_name}
+              </p>
+            </Card>
+          ))}
+        </CardList>
+
+        <Link to="/rockets" role="button" className="RocketsInformation">
+          See rockets information...
+        </Link>
       </header>
     </div>
   );
