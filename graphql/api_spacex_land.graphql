@@ -438,6 +438,9 @@ input uuid_comparison_exp {
   _nin: [uuid!]
 }
 
+"""
+A scalar whose value is a generic Universally Unique Identifier, can represent any UUID version specified in RFC 4122.
+"""
 scalar uuid
 
 """
@@ -476,6 +479,9 @@ input timestamptz_comparison_exp {
   _nin: [timestamptz!]
 }
 
+"""
+this scalar converts TIMESTAMP values from UTC to the client's session time zone
+"""
 scalar timestamptz
 
 """
@@ -1343,6 +1349,9 @@ input users_obj_rel_insert_input {
   on_conflict: users_on_conflict
 }
 
+"""
+scalar whose value conforms to the mongodb object id format
+"""
 scalar ObjectID
 
 type CoreMission {
