@@ -65,6 +65,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+    """
+    fetch all capsule information of type [Capsule] 
+    """
   capsules(
     find: CapsulesFind
     limit: Int
@@ -76,6 +79,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+    """
+    fetch all past capsule information of type [Capsule] 
+    """
   capsulesPast(
     find: CapsulesFind
     limit: Int
@@ -87,6 +93,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+    """
+    fetch all upcoming capsule information of type [Capsule] 
+    """
   capsulesUpcoming(
     find: CapsulesFind
     limit: Int
@@ -98,6 +107,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+    """
+    fetch capsule information from table: Capsule with id: ID! 
+    """
   capsule(id: ID!): Capsule
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
