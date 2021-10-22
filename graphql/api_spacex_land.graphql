@@ -124,7 +124,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all cores information of type [Cores] 
+  fetch all cores information of type [Core] 
   """
   cores(
     find: CoresFind
@@ -138,7 +138,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all cores information of type [Cores] that have launched
+  fetch all cores information of type [Core] that have launched
   """
   coresPast(
     find: CoresFind
@@ -152,7 +152,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all cores information of type [Cores] that have yet to launch
+  fetch all cores information of type [Core] that have yet to launch
   """
   coresUpcoming(
     find: CoresFind
@@ -270,7 +270,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all launch result information of type [Launch] that have launched
+  fetch all past launch result information of table: LaunchesPastResult that have launched
   """
   launchesPastResult(
     find: LaunchFind
@@ -297,41 +297,65 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch specific launch information from table: Launch with a given id
+  """
   launch(id: ID!): Launch
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from the latest launch from table: Launch
+  """
   launchLatest(offset: Int): Launch
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from the next upcoming launch from table: Launch
+  """
   launchNext(offset: Int): Launch
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from all launchpads of type [Launchpad]
+  """
   launchpads(limit: Int, offset: Int): [Launchpad]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch specific launchpad information from table: Launchpad with a given id
+  """
   launchpad(id: ID!): Launchpad
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from all missions of type [Mission]
+  """
   missions(find: MissionsFind, limit: Int, offset: Int): [Mission]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all missions result information of table: MissionResult that have launched
+  """
   missionsResult(find: MissionsFind, limit: Int, offset: Int): MissionResult
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch specific mission information from table: Mission with a given id
+  """
   mission(id: ID!): Mission
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
