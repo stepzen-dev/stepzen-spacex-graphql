@@ -1358,3 +1358,19 @@ type CoreMission {
   name: String
   flight: Int
 }
+
+type debug {
+  args: JSON
+  data: JSON
+  files: JSON
+  form: JSON
+  headers: JSON
+  json: JSON
+  method: String
+  url: String
+}
+
+type Query {
+  debugger(id: String!): debug
+    @rest(endpoint: "https://httpbin.org/anything/$id")
+}
