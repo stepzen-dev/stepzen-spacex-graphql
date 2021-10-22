@@ -361,6 +361,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from all payloads of type [Payload]
+  """
   payloads(
     find: PayloadsFind
     limit: Int
@@ -372,26 +375,41 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from a specific payload from table: Payload with a given id
+  """
   payload(id: ID!): Payload
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch current roadster data from table: Roadster with a given id 
+  """
   roadster: Roadster
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from all rockets of type [Rocket]
+  """
   rockets(limit: Int, offset: Int): [Rocket]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all rocket result information of table: RocketsResult that have launched
+  """
   rocketsResult(limit: Int, offset: Int): RocketsResult
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from a specific rocket from table: Rocket with a given id
+  """
   rocket(id: ID!): Rocket
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
