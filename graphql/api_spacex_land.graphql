@@ -108,7 +108,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch capsule information from table: Capsule with id: ID! 
+  fetch specific capsule information from table: Capsule with a given id 
   """
   capsule(id: ID!): Capsule
     @graphql(
@@ -166,7 +166,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch core information from table: Core with id: ID! 
+  fetch information of a specific core from table: Core with a given id 
   """  
   core(id: ID!): Core
     @graphql(
@@ -174,7 +174,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all dragons information of type [Dragon] 
+  fetch all dragon capsules of type [Dragon] 
   """  
   dragons(limit: Int, offset: Int): [Dragon]
     @graphql(
@@ -182,7 +182,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch dragon information from table: Dragon with id: ID! 
+  fetch a specific dragon capsule from table: Dragon with a given id 
   """   
   dragon(id: ID!): Dragon
     @graphql(
@@ -190,7 +190,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all company histories of type [History] 
+  fetch all historical events of type [History] 
   """
   histories(
     find: HistoryFind
@@ -204,7 +204,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  
+  fetch historical events from table: HistoriesResults
   """
   historiesResult(
     find: HistoryFind
@@ -217,21 +217,33 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch a specific historical event from table: History with a given id
+  """
   history(id: ID!): History
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all landing pads of type [Landpad]
+  """
   landpads(limit: Int, offset: Int): [Landpad]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch a specific landing pad from table: Landpad with a given id
+  """
   landpad(id: ID!): Landpad
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all launches of type [Launch] 
+  """
   launches(
     find: LaunchFind
     limit: Int
@@ -243,6 +255,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all launch information of type [Launch] that have launched
+  """
   launchesPast(
     find: LaunchFind
     limit: Int
@@ -254,6 +269,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all launch result information of type [Launch] that have launched
+  """
   launchesPastResult(
     find: LaunchFind
     limit: Int
@@ -265,6 +283,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all launch information of type [Launch] that have yet to launch
+  """
   launchesUpcoming(
     find: LaunchFind
     limit: Int
