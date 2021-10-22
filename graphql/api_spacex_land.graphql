@@ -65,9 +65,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
-    """
-    fetch all capsule information of type [Capsule] 
-    """
+  """
+  fetch all capsule information of type [Capsule] 
+  """
   capsules(
     find: CapsulesFind
     limit: Int
@@ -79,9 +79,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
-    """
-    fetch all past capsule information of type [Capsule] 
-    """
+  """
+  fetch all capsule information of type [Capsule] that have launched
+  """
   capsulesPast(
     find: CapsulesFind
     limit: Int
@@ -93,9 +93,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
-    """
-    fetch all upcoming capsule information of type [Capsule] 
-    """
+  """
+  fetch all capsule information of type [Capsule] that have yet to launch
+  """
   capsulesUpcoming(
     find: CapsulesFind
     limit: Int
@@ -107,19 +107,25 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
-    """
-    fetch capsule information from table: Capsule with id: ID! 
-    """
+  """
+  fetch capsule information from table: Capsule with id: ID! 
+  """
   capsule(id: ID!): Capsule
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch company information of type Info
+  """
   company: Info
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all cores information of type [Cores] 
+  """
   cores(
     find: CoresFind
     limit: Int
@@ -131,6 +137,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all cores information of type [Cores] that have launched
+  """
   coresPast(
     find: CoresFind
     limit: Int
@@ -142,6 +151,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all cores information of type [Cores] that have yet to launch
+  """
   coresUpcoming(
     find: CoresFind
     limit: Int
@@ -153,21 +165,33 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch core information from table: Core with id: ID! 
+  """  
   core(id: ID!): Core
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all dragons information of type [Dragon] 
+  """  
   dragons(limit: Int, offset: Int): [Dragon]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch dragon information from table: Dragon with id: ID! 
+  """   
   dragon(id: ID!): Dragon
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all company histories of type [History] 
+  """
   histories(
     find: HistoryFind
     limit: Int
@@ -179,6 +203,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  
+  """
   historiesResult(
     find: HistoryFind
     limit: Int
