@@ -644,7 +644,7 @@ type users_min_fields {
 }
 
 """
-fields for finding all capsule information
+input type CapsulesFind for fields for finding all capsule information
 """
 input CapsulesFind {
   id: ID
@@ -724,20 +724,32 @@ type DragonHeatShield {
   temp_degrees: Int
 }
 
+"""
+fields for various masses of type Mass
+"""
 type Mass {
   kg: Int
   lb: Int
 }
 
+"""
+fields for various volumes of type Volume
+"""
 type Volume {
   cubic_feet: Int
   cubic_meters: Int
 }
 
+"""
+field for pressurized_capsule of type DragonPressurizedCapsule
+"""
 type DragonPressurizedCapsule {
   payload_volume: Volume
 }
 
+"""
+fields for thrusters of type DragonPressurizedCapsule
+"""
 type DragonThrust {
   amount: Int
   fuel_1: String
@@ -747,21 +759,33 @@ type DragonThrust {
   type: String
 }
 
+"""
+fields for various thrusts of type Force
+"""
 type Force {
   kN: Float
   lbf: Float
 }
 
+"""
+fields for trunk of type DragonTrunk
+"""
 type DragonTrunk {
   cargo: DragonTrunkCargo
   trunk_volume: Volume
 }
 
+"""
+fields for cargo of type DragonTrunkCargo
+"""
 type DragonTrunkCargo {
   solar_array: Int
   unpressurized_cargo: Boolean
 }
 
+"""
+fields for company information of type Info
+"""
 type Info {
   ceo: String
   coo: String
@@ -780,12 +804,18 @@ type Info {
   vehicles: Int
 }
 
+"""
+fields for headquarters of type Address
+"""
 type Address {
   address: String
   city: String
   state: String
 }
 
+"""
+fields for links of type InfoLinks
+"""
 type InfoLinks {
   elon_twitter: String
   flickr: String
@@ -793,6 +823,9 @@ type InfoLinks {
   website: String
 }
 
+"""
+fields for finding all cores information of type CoresFind
+"""
 input CoresFind {
   asds_attempts: Int
   asds_landings: Int
