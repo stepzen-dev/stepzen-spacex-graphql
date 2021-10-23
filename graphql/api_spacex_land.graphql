@@ -670,12 +670,17 @@ type Capsule {
   dragon: Dragon
 }
 
-
+"""
+fields for missions of type CapsuleMission
+"""
 type CapsuleMission {
   flight: Int
   name: String
 }
 
+"""
+fields for dragon capsules of type Dragon
+"""
 type Dragon {
   active: Boolean
   crew_capacity: Int
@@ -701,11 +706,17 @@ type Dragon {
   wikipedia: String
 }
 
+"""
+fields for diameter and height_w_trunk, both of type Distance
+"""
 type Distance {
   feet: Float
   meters: Float
 }
 
+"""
+fields for head_shield of type DragonHeatShield
+"""
 type DragonHeatShield {
   dev_partner: String
   material: String
