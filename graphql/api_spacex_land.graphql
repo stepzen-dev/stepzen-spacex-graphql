@@ -840,6 +840,9 @@ input CoresFind {
   water_landing: Boolean
 }
 
+"""
+fields for all core information of type Core
+"""
 type Core {
   asds_attempts: Int
   asds_landings: Int
@@ -854,6 +857,9 @@ type Core {
   water_landing: Boolean
 }
 
+"""
+fields for find of type HistoryFind
+"""
 input HistoryFind {
   end: Date
   flight_number: Int
@@ -861,6 +867,9 @@ input HistoryFind {
   start: Date
 }
 
+"""
+fields for all historical events data of type History
+"""
 type History {
   details: String
   event_date_unix: Date
@@ -871,12 +880,18 @@ type History {
   flight: Launch
 }
 
+"""
+fields for links of type Link
+"""
 type Link {
   article: String
   reddit: String
   wikipedia: String
 }
 
+"""
+fields for all launches and flight of type Launch
+"""
 type Launch {
   details: String
   id: ID
@@ -899,12 +914,18 @@ type Launch {
   ships: [Ship]
 }
 
+"""
+fields for launch_site of type LaunchSite
+"""
 type LaunchSite {
   site_id: String
   site_name_long: String
   site_name: String
 }
 
+"""
+fields for links of type LaunchLinks
+"""
 type LaunchLinks {
   article_link: String
   flickr_images: [String]
