@@ -415,6 +415,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information of all ships of type [Ship] that assist launches
+  """
   ships(
     find: ShipsFind
     limit: Int
@@ -425,7 +428,10 @@ type Query {
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
-    )
+  )
+  """
+  fetch all ship result information of table: ShipsResult that have assisted launches
+  """
   shipsResult(
     find: ShipsFind
     limit: Int
@@ -437,6 +443,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+   """
+  fetch information from a specific ship from table: Ship with a given id
+  """
   ship(id: ID!): Ship
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
