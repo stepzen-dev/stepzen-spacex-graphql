@@ -985,6 +985,9 @@ type LaunchRocketFirstStageCore {
   reused: Boolean
 }
 
+"""
+fields for rocket, vehicles_launched, and data of type Rocket
+"""
 type Rocket {
   active: Boolean
   boosters: Int
@@ -1009,6 +1012,9 @@ type Rocket {
   wikipedia: String
 }
 
+"""
+fields for engines of type RocketEngines
+"""
 type RocketEngines {
   number: Int
   type: String
@@ -1022,6 +1028,9 @@ type RocketEngines {
   thrust_to_weight: Float
 }
 
+"""
+fields for first_stage of type RocketFirstStage
+"""
 type RocketFirstStage {
   burn_time_sec: Int
   engines: Int
@@ -1031,11 +1040,17 @@ type RocketFirstStage {
   thrust_vacuum: Force
 }
 
+"""
+fields for landing_legs of type RocketLandingLegs
+"""
 type RocketLandingLegs {
   number: Int
   material: String
 }
 
+"""
+fields for payload_weights of type RocketPayloadWeight
+"""
 type RocketPayloadWeight {
   id: String
   kg: Int
@@ -1043,6 +1058,9 @@ type RocketPayloadWeight {
   name: String
 }
 
+"""
+fields for second_stage of type RocketSecondStage
+"""
 type RocketSecondStage {
   burn_time_sec: Int
   engines: Int
