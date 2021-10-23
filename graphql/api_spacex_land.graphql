@@ -1069,21 +1069,33 @@ type RocketSecondStage {
   thrust: Force
 }
 
+"""
+fields for payloads of type RocketSecondStagePayloads
+"""
 type RocketSecondStagePayloads {
   option_1: String
   composite_fairing: RocketSecondStagePayloadCompositeFairing
 }
 
+"""
+fields for composite_fairing of type RocketSecondStagePayloadCompositeFairing
+"""
 type RocketSecondStagePayloadCompositeFairing {
   height: Distance
   diameter: Distance
 }
 
+"""
+field for second_stage of type LaunchRocketSecondStage
+"""
 type LaunchRocketSecondStage {
   block: Int
   payloads: [Payload]
 }
 
+"""
+fields for type payloads of type Payload
+"""
 type Payload {
   customers: [String]
   id: ID
@@ -1098,6 +1110,9 @@ type Payload {
   reused: Boolean
 }
 
+"""
+fields for orbit_params of type PayloadOrbitParams
+"""
 type PayloadOrbitParams {
   apoapsis_km: Float
   arg_of_pericenter: Float
