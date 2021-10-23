@@ -643,6 +643,9 @@ type users_min_fields {
   twitter: String
 }
 
+"""
+fields for finding all capsule information
+"""
 input CapsulesFind {
   id: ID
   landings: Int
@@ -653,6 +656,9 @@ input CapsulesFind {
   type: String
 }
 
+"""
+fields for all capsule information of type Capsule
+"""
 type Capsule {
   id: ID
   landings: Int
@@ -663,6 +669,7 @@ type Capsule {
   type: String
   dragon: Dragon
 }
+
 
 type CapsuleMission {
   flight: Int
