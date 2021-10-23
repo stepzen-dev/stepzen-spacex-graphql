@@ -940,6 +940,9 @@ type LaunchLinks {
   wikipedia: String
 }
 
+"""
+fields for rocket of type LaunchRocket
+"""
 type LaunchRocket {
   fairings: LaunchRocketFairings
   first_stage: LaunchRocketFirstStage
@@ -949,6 +952,9 @@ type LaunchRocket {
   second_stage: LaunchRocketSecondStage
 }
 
+"""
+fields for fairings of type LaunchRocketFairings
+"""
 type LaunchRocketFairings {
   recovered: Boolean
   recovery_attempt: Boolean
@@ -956,10 +962,16 @@ type LaunchRocketFairings {
   ship: String
 }
 
+"""
+field for first_stage of type LaunchRocketFirstStage
+"""
 type LaunchRocketFirstStage {
   cores: [LaunchRocketFirstStageCore]
 }
 
+"""
+fields for cores of type LaunchRocketFirstStageCore
+"""
 type LaunchRocketFirstStageCore {
   block: Int
   core: Core
