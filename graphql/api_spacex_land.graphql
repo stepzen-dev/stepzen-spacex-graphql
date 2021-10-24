@@ -1131,10 +1131,16 @@ type PayloadOrbitParams {
   semi_major_axis_km: Float
 }
 
+"""
+field for telemetry of type LaunchTelemetry
+"""
 type LaunchTelemetry {
   flight_club: String
 }
 
+"""
+fields for all ships that assist launches of type Ship
+"""
 type Ship {
   abs: Int
   active: Boolean
@@ -1161,21 +1167,33 @@ type Ship {
   year_built: Int
 }
 
+"""
+fields for missions of type ShipMission
+"""
 type ShipMission {
   flight: String
   name: String
 }
 
+"""
+fields for position of type ShipLocation
+"""
 type ShipLocation {
   latitude: Float
   longitude: Float
 }
 
+"""
+fields for historical events of type HistoriesResult
+"""
 type HistoriesResult {
   result: Result
   data: [History]
 }
 
+"""
+field for result of type Result
+"""
 type Result {
   totalCount: Int
 }
