@@ -858,7 +858,7 @@ type Core {
 }
 
 """
-fields for find of type HistoryFind
+fields for find of input type HistoryFind
 """
 input HistoryFind {
   end: Date
@@ -1198,6 +1198,9 @@ type Result {
   totalCount: Int
 }
 
+"""
+fields for all landing pads of type LandPad
+"""
 type Landpad {
   attempted_landings: String
   details: String
@@ -1210,6 +1213,9 @@ type Landpad {
   wikipedia: String
 }
 
+"""
+fields for location of type Location
+"""
 type Location {
   latitude: Float
   longitude: Float
@@ -1217,6 +1223,9 @@ type Location {
   region: String
 }
 
+"""
+fields for input type LaunchFind for finding information on all launches
+"""
 input LaunchFind {
   apoapsis_km: Float
   block: Int
@@ -1280,11 +1289,17 @@ input LaunchFind {
   tentative: String
 }
 
+"""
+fields for finding all past launch result information of type LaunchesPastResult
+"""
 type LaunchesPastResult {
   result: Result
   data: [Launch]
 }
 
+"""
+fields for finding information from all launchpads of type Launchpad
+"""
 type Launchpad {
   attempted_launches: Int
   details: String
