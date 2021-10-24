@@ -1437,6 +1437,9 @@ input ShipsFind {
   mission: String
 }
 
+"""
+fields for all ship result information of type ShipsResult
+"""
 type ShipsResult {
   result: Result
   data: [Ship]
@@ -1636,6 +1639,9 @@ scalar whose value conforms to the mongodb object id format
 """
 scalar ObjectID
 
+"""
+fields for all core mission information of type CoreMission
+"""
 type CoreMission {
   name: String
   flight: Int
