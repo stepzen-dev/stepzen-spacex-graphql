@@ -1312,6 +1312,9 @@ type Launchpad {
   wikipedia: String
 }
 
+"""
+fields for find of input type MissionsFind
+"""
 input MissionsFind {
   id: ID
   manufacturer: String
@@ -1319,6 +1322,9 @@ input MissionsFind {
   payload_id: String
 }
 
+"""
+fields for finding all mission and data information of type Mission 
+"""
 type Mission {
   description: String
   id: ID
@@ -1330,11 +1336,17 @@ type Mission {
   payloads: [Payload]
 }
 
+"""
+fields for finding all missions result information of type MissionResult
+"""
 type MissionResult {
   result: Result
   data: [Mission]
 }
 
+"""
+fields for find for all payloads of input type PayloadsFind
+"""
 input PayloadsFind {
   apoapsis_km: Float
   customer: String
@@ -1359,6 +1371,9 @@ input PayloadsFind {
   semi_major_axis_km: Float
 }
 
+"""
+fields for finding current roadster data of type Roadster
+"""
 type Roadster {
   apoapsis_au: Float
   details: String
@@ -1386,11 +1401,17 @@ type Roadster {
   wikipedia: String
 }
 
+"""
+fields for finding all rocket result information of type RocketsResult
+"""
 type RocketsResult {
   result: Result
   data: [Rocket]
 }
 
+"""
+fields for find of input type ShipsFind
+"""
 input ShipsFind {
   id: ID
   name: String
