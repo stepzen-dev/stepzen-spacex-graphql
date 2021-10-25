@@ -66,7 +66,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all capsule information of type [Capsule] 
+  fetch all capsules information of type [Capsule] 
   """
   capsules(
     find: CapsulesFind
@@ -80,7 +80,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all capsule information of type [Capsule] that have launched
+  fetch all launched capsules information of type [Capsule]
   """
   capsulesPast(
     find: CapsulesFind
@@ -94,7 +94,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all capsule information of type [Capsule] that have yet to launch
+  fetch all yet to launch capsules information of type [Capsule] 
   """
   capsulesUpcoming(
     find: CapsulesFind
@@ -108,7 +108,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch specific capsule information from table: Capsule with a given id 
+  fetch specific capsule information from table: "Capsule" 
   """
   capsule(id: ID!): Capsule
     @graphql(
@@ -138,7 +138,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all cores information of type [Core] that have launched
+  fetch all launched cores information of type [Core]
   """
   coresPast(
     find: CoresFind
@@ -152,7 +152,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all cores information of type [Core] that have yet to launch
+  fetch all yet to launch cores information of type [Core]
   """
   coresUpcoming(
     find: CoresFind
@@ -166,7 +166,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch information of a specific core from table: Core with a given id 
+  fetch information of a specific core from table: "Core"
   """  
   core(id: ID!): Core
     @graphql(
@@ -182,7 +182,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch a specific dragon capsule from table: Dragon with a given id 
+  fetch a specific dragon capsule from table: "Dragon" 
   """   
   dragon(id: ID!): Dragon
     @graphql(
@@ -204,7 +204,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch historical events from table: HistoriesResults
+  fetch historical events from table: "HistoriesResult"
   """
   historiesResult(
     find: HistoryFind
@@ -218,7 +218,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch a specific historical event from table: History with a given id
+  fetch a specific historical event from table: "History"
   """
   history(id: ID!): History
     @graphql(
@@ -234,7 +234,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch a specific landing pad from table: Landpad with a given id
+  fetch a specific landing pad from table: "Landpad"
   """
   landpad(id: ID!): Landpad
     @graphql(
@@ -256,7 +256,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all launch information of type [Launch] that have launched
+  fetch all past launch information of type [Launch]
   """
   launchesPast(
     find: LaunchFind
@@ -270,7 +270,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all past launch result information of table: LaunchesPastResult that have launched
+  fetch all past launch result information from table: "LaunchesPastResult"
   """
   launchesPastResult(
     find: LaunchFind
@@ -284,7 +284,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all launch information of type [Launch] that have yet to launch
+  fetch all upcoming launch information of type [Launch]
   """
   launchesUpcoming(
     find: LaunchFind
@@ -298,7 +298,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch specific launch information from table: Launch with a given id
+  fetch specific launch information from table: "Launch"
   """
   launch(id: ID!): Launch
     @graphql(
@@ -306,7 +306,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch information from the latest launch from table: Launch
+  fetch information from the latest launch from table: "Launch"
   """
   launchLatest(offset: Int): Launch
     @graphql(
@@ -314,7 +314,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch information from the next upcoming launch from table: Launch
+  fetch information from the next upcoming launch from table: "Launch"
   """
   launchNext(offset: Int): Launch
     @graphql(
@@ -330,7 +330,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch specific launchpad information from table: Launchpad with a given id
+  fetch specific launchpad information from table: "Launchpad"
   """
   launchpad(id: ID!): Launchpad
     @graphql(
@@ -346,7 +346,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all missions result information of table: MissionResult that have launched
+  fetch all missions result information from table: "MissionResult"
   """
   missionsResult(find: MissionsFind, limit: Int, offset: Int): MissionResult
     @graphql(
@@ -354,7 +354,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch specific mission information from table: Mission with a given id
+  fetch specific mission information from table: "Mission" 
   """
   mission(id: ID!): Mission
     @graphql(
@@ -376,7 +376,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch information from a specific payload from table: Payload with a given id
+  fetch information from a specific payload from table: "Payload"
   """
   payload(id: ID!): Payload
     @graphql(
@@ -384,7 +384,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch current roadster data from table: Roadster with a given id 
+  fetch current roadster orbit data from table: "Roadster"
   """
   roadster: Roadster
     @graphql(
@@ -400,7 +400,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch all rocket result information of table: RocketsResult that have launched
+  fetch all rocket result information from table: "RocketsResult"
   """
   rocketsResult(limit: Int, offset: Int): RocketsResult
     @graphql(
@@ -408,7 +408,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
   """
-  fetch information from a specific rocket from table: Rocket with a given id
+  fetch information from a specific rocket from table: "Rocket" 
   """
   rocket(id: ID!): Rocket
     @graphql(
@@ -430,7 +430,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
   )
   """
-  fetch all ship result information of table: ShipsResult that have assisted launches
+  fetch all ship result information from table: "ShipsResult" that have assisted launches
   """
   shipsResult(
     find: ShipsFind
@@ -444,7 +444,7 @@ type Query {
       prefix: { value: "", includeRootOperations: true }
     )
    """
-  fetch information from a specific ship from table: Ship with a given id
+  fetch information from a specific ship from table: "Ship" 
   """
   ship(id: ID!): Ship
     @graphql(
@@ -644,7 +644,7 @@ type users_min_fields {
 }
 
 """
-input type CapsulesFind for fields for finding all capsule information
+input type for finding information on all capsules
 """
 input CapsulesFind {
   id: ID
@@ -707,7 +707,7 @@ type Dragon {
 }
 
 """
-fields for diameter and height_w_trunk, both of type Distance
+fields for diameter, height_w_trunk, and height, all of type Distance
 """
 type Distance {
   feet: Float
@@ -715,7 +715,7 @@ type Distance {
 }
 
 """
-fields for head_shield of type DragonHeatShield
+fields for heat_shield of type DragonHeatShield
 """
 type DragonHeatShield {
   dev_partner: String
@@ -748,7 +748,7 @@ type DragonPressurizedCapsule {
 }
 
 """
-fields for thrusters of type DragonPressurizedCapsule
+fields for thrusters of type DragonThrust
 """
 type DragonThrust {
   amount: Int
@@ -1094,7 +1094,7 @@ type LaunchRocketSecondStage {
 }
 
 """
-fields for type payloads of type Payload
+fields fo payloads of type Payload
 """
 type Payload {
   customers: [String]
@@ -1139,7 +1139,7 @@ type LaunchTelemetry {
 }
 
 """
-fields for all ships that assist launches of type Ship
+fields for all ships of type Ship
 """
 type Ship {
   abs: Int
@@ -1199,7 +1199,7 @@ type Result {
 }
 
 """
-fields for all landing pads of type LandPad
+fields for all landing pads of type Landpad
 """
 type Landpad {
   attempted_landings: String
@@ -1224,7 +1224,7 @@ type Location {
 }
 
 """
-fields for input type LaunchFind for finding information on all launches
+fields for  finding information on all launches
 """
 input LaunchFind {
   apoapsis_km: Float
