@@ -65,6 +65,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all capsules information of type [Capsule] 
+  """
   capsules(
     find: CapsulesFind
     limit: Int
@@ -76,6 +79,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all launched capsules information of type [Capsule]
+  """
   capsulesPast(
     find: CapsulesFind
     limit: Int
@@ -87,6 +93,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all yet to launch capsules information of type [Capsule] 
+  """
   capsulesUpcoming(
     find: CapsulesFind
     limit: Int
@@ -98,16 +107,25 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch specific capsule information from table: "Capsule" 
+  """
   capsule(id: ID!): Capsule
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch company information of type Info
+  """
   company: Info
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all cores information of type [Core] 
+  """
   cores(
     find: CoresFind
     limit: Int
@@ -119,6 +137,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all launched cores information of type [Core]
+  """
   coresPast(
     find: CoresFind
     limit: Int
@@ -130,6 +151,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all yet to launch cores information of type [Core]
+  """
   coresUpcoming(
     find: CoresFind
     limit: Int
@@ -141,21 +165,33 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information of a specific core from table: "Core"
+  """  
   core(id: ID!): Core
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all dragon capsules of type [Dragon] 
+  """  
   dragons(limit: Int, offset: Int): [Dragon]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch a specific dragon capsule from table: "Dragon" 
+  """   
   dragon(id: ID!): Dragon
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all historical events of type [History] 
+  """
   histories(
     find: HistoryFind
     limit: Int
@@ -167,6 +203,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch historical events from table: "HistoriesResult"
+  """
   historiesResult(
     find: HistoryFind
     limit: Int
@@ -178,21 +217,33 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch a specific historical event from table: "History"
+  """
   history(id: ID!): History
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all landing pads of type [Landpad]
+  """
   landpads(limit: Int, offset: Int): [Landpad]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch a specific landing pad from table: "Landpad"
+  """
   landpad(id: ID!): Landpad
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all launches of type [Launch] 
+  """
   launches(
     find: LaunchFind
     limit: Int
@@ -204,6 +255,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all past launch information of type [Launch]
+  """
   launchesPast(
     find: LaunchFind
     limit: Int
@@ -215,6 +269,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all past launch result information from table: "LaunchesPastResult"
+  """
   launchesPastResult(
     find: LaunchFind
     limit: Int
@@ -226,6 +283,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all upcoming launch information of type [Launch]
+  """
   launchesUpcoming(
     find: LaunchFind
     limit: Int
@@ -237,46 +297,73 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch specific launch information from table: "Launch"
+  """
   launch(id: ID!): Launch
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from the latest launch from table: "Launch"
+  """
   launchLatest(offset: Int): Launch
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from the next upcoming launch from table: "Launch"
+  """
   launchNext(offset: Int): Launch
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from all launchpads of type [Launchpad]
+  """
   launchpads(limit: Int, offset: Int): [Launchpad]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch specific launchpad information from table: "Launchpad"
+  """
   launchpad(id: ID!): Launchpad
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from all missions of type [Mission]
+  """
   missions(find: MissionsFind, limit: Int, offset: Int): [Mission]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all missions result information from table: "MissionResult"
+  """
   missionsResult(find: MissionsFind, limit: Int, offset: Int): MissionResult
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch specific mission information from table: "Mission" 
+  """
   mission(id: ID!): Mission
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from all payloads of type [Payload]
+  """
   payloads(
     find: PayloadsFind
     limit: Int
@@ -288,31 +375,49 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from a specific payload from table: "Payload"
+  """
   payload(id: ID!): Payload
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch current roadster orbit data from table: "Roadster"
+  """
   roadster: Roadster
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from all rockets of type [Rocket]
+  """
   rockets(limit: Int, offset: Int): [Rocket]
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch all rocket result information from table: "RocketsResult"
+  """
   rocketsResult(limit: Int, offset: Int): RocketsResult
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information from a specific rocket from table: "Rocket" 
+  """
   rocket(id: ID!): Rocket
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+  """
+  fetch information of all ships of type [Ship] that assist launches
+  """
   ships(
     find: ShipsFind
     limit: Int
@@ -323,7 +428,10 @@ type Query {
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
-    )
+  )
+  """
+  fetch all ship result information from table: "ShipsResult" that have assisted launches
+  """
   shipsResult(
     find: ShipsFind
     limit: Int
@@ -335,6 +443,9 @@ type Query {
       endpoint: "https://api.spacex.land/graphql/"
       prefix: { value: "", includeRootOperations: true }
     )
+   """
+  fetch information from a specific ship from table: "Ship" 
+  """
   ship(id: ID!): Ship
     @graphql(
       endpoint: "https://api.spacex.land/graphql/"
@@ -532,6 +643,9 @@ type users_min_fields {
   twitter: String
 }
 
+"""
+input type for finding information on all capsules
+"""
 input CapsulesFind {
   id: ID
   landings: Int
@@ -542,6 +656,9 @@ input CapsulesFind {
   type: String
 }
 
+"""
+fields for all capsule information of type Capsule
+"""
 type Capsule {
   id: ID
   landings: Int
@@ -553,11 +670,17 @@ type Capsule {
   dragon: Dragon
 }
 
+"""
+fields for missions of type CapsuleMission
+"""
 type CapsuleMission {
   flight: Int
   name: String
 }
 
+"""
+fields for dragon capsules of type Dragon
+"""
 type Dragon {
   active: Boolean
   crew_capacity: Int
@@ -583,11 +706,17 @@ type Dragon {
   wikipedia: String
 }
 
+"""
+fields for diameter, height_w_trunk, and height, all of type Distance
+"""
 type Distance {
   feet: Float
   meters: Float
 }
 
+"""
+fields for heat_shield of type DragonHeatShield
+"""
 type DragonHeatShield {
   dev_partner: String
   material: String
@@ -595,20 +724,32 @@ type DragonHeatShield {
   temp_degrees: Int
 }
 
+"""
+fields for various masses of type Mass
+"""
 type Mass {
   kg: Int
   lb: Int
 }
 
+"""
+fields for various volumes of type Volume
+"""
 type Volume {
   cubic_feet: Int
   cubic_meters: Int
 }
 
+"""
+field for pressurized_capsule of type DragonPressurizedCapsule
+"""
 type DragonPressurizedCapsule {
   payload_volume: Volume
 }
 
+"""
+fields for thrusters of type DragonThrust
+"""
 type DragonThrust {
   amount: Int
   fuel_1: String
@@ -618,21 +759,33 @@ type DragonThrust {
   type: String
 }
 
+"""
+fields for various thrusts of type Force
+"""
 type Force {
   kN: Float
   lbf: Float
 }
 
+"""
+fields for trunk of type DragonTrunk
+"""
 type DragonTrunk {
   cargo: DragonTrunkCargo
   trunk_volume: Volume
 }
 
+"""
+fields for cargo of type DragonTrunkCargo
+"""
 type DragonTrunkCargo {
   solar_array: Int
   unpressurized_cargo: Boolean
 }
 
+"""
+fields for company information of type Info
+"""
 type Info {
   ceo: String
   coo: String
@@ -651,12 +804,18 @@ type Info {
   vehicles: Int
 }
 
+"""
+fields for headquarters of type Address
+"""
 type Address {
   address: String
   city: String
   state: String
 }
 
+"""
+fields for links of type InfoLinks
+"""
 type InfoLinks {
   elon_twitter: String
   flickr: String
@@ -664,6 +823,9 @@ type InfoLinks {
   website: String
 }
 
+"""
+fields for finding all cores information of type CoresFind
+"""
 input CoresFind {
   asds_attempts: Int
   asds_landings: Int
@@ -678,6 +840,9 @@ input CoresFind {
   water_landing: Boolean
 }
 
+"""
+fields for all core information of type Core
+"""
 type Core {
   asds_attempts: Int
   asds_landings: Int
@@ -692,6 +857,9 @@ type Core {
   water_landing: Boolean
 }
 
+"""
+fields for find of input type HistoryFind
+"""
 input HistoryFind {
   end: Date
   flight_number: Int
@@ -699,6 +867,9 @@ input HistoryFind {
   start: Date
 }
 
+"""
+fields for all historical events data of type History
+"""
 type History {
   details: String
   event_date_unix: Date
@@ -709,12 +880,18 @@ type History {
   flight: Launch
 }
 
+"""
+fields for links of type Link
+"""
 type Link {
   article: String
   reddit: String
   wikipedia: String
 }
 
+"""
+fields for all launches and flight of type Launch
+"""
 type Launch {
   details: String
   id: ID
@@ -737,12 +914,18 @@ type Launch {
   ships: [Ship]
 }
 
+"""
+fields for launch_site of type LaunchSite
+"""
 type LaunchSite {
   site_id: String
   site_name_long: String
   site_name: String
 }
 
+"""
+fields for links of type LaunchLinks
+"""
 type LaunchLinks {
   article_link: String
   flickr_images: [String]
@@ -757,6 +940,9 @@ type LaunchLinks {
   wikipedia: String
 }
 
+"""
+fields for rocket of type LaunchRocket
+"""
 type LaunchRocket {
   fairings: LaunchRocketFairings
   first_stage: LaunchRocketFirstStage
@@ -766,6 +952,9 @@ type LaunchRocket {
   second_stage: LaunchRocketSecondStage
 }
 
+"""
+fields for fairings of type LaunchRocketFairings
+"""
 type LaunchRocketFairings {
   recovered: Boolean
   recovery_attempt: Boolean
@@ -773,10 +962,16 @@ type LaunchRocketFairings {
   ship: String
 }
 
+"""
+field for first_stage of type LaunchRocketFirstStage
+"""
 type LaunchRocketFirstStage {
   cores: [LaunchRocketFirstStageCore]
 }
 
+"""
+fields for cores of type LaunchRocketFirstStageCore
+"""
 type LaunchRocketFirstStageCore {
   block: Int
   core: Core
@@ -790,6 +985,9 @@ type LaunchRocketFirstStageCore {
   reused: Boolean
 }
 
+"""
+fields for rocket, vehicles_launched, and data of type Rocket
+"""
 type Rocket {
   active: Boolean
   boosters: Int
@@ -814,6 +1012,9 @@ type Rocket {
   wikipedia: String
 }
 
+"""
+fields for engines of type RocketEngines
+"""
 type RocketEngines {
   number: Int
   type: String
@@ -827,6 +1028,9 @@ type RocketEngines {
   thrust_to_weight: Float
 }
 
+"""
+fields for first_stage of type RocketFirstStage
+"""
 type RocketFirstStage {
   burn_time_sec: Int
   engines: Int
@@ -836,11 +1040,17 @@ type RocketFirstStage {
   thrust_vacuum: Force
 }
 
+"""
+fields for landing_legs of type RocketLandingLegs
+"""
 type RocketLandingLegs {
   number: Int
   material: String
 }
 
+"""
+fields for payload_weights of type RocketPayloadWeight
+"""
 type RocketPayloadWeight {
   id: String
   kg: Int
@@ -848,6 +1058,9 @@ type RocketPayloadWeight {
   name: String
 }
 
+"""
+fields for second_stage of type RocketSecondStage
+"""
 type RocketSecondStage {
   burn_time_sec: Int
   engines: Int
@@ -856,21 +1069,33 @@ type RocketSecondStage {
   thrust: Force
 }
 
+"""
+fields for payloads of type RocketSecondStagePayloads
+"""
 type RocketSecondStagePayloads {
   option_1: String
   composite_fairing: RocketSecondStagePayloadCompositeFairing
 }
 
+"""
+fields for composite_fairing of type RocketSecondStagePayloadCompositeFairing
+"""
 type RocketSecondStagePayloadCompositeFairing {
   height: Distance
   diameter: Distance
 }
 
+"""
+field for second_stage of type LaunchRocketSecondStage
+"""
 type LaunchRocketSecondStage {
   block: Int
   payloads: [Payload]
 }
 
+"""
+fields fo payloads of type Payload
+"""
 type Payload {
   customers: [String]
   id: ID
@@ -885,6 +1110,9 @@ type Payload {
   reused: Boolean
 }
 
+"""
+fields for orbit_params of type PayloadOrbitParams
+"""
 type PayloadOrbitParams {
   apoapsis_km: Float
   arg_of_pericenter: Float
@@ -903,10 +1131,16 @@ type PayloadOrbitParams {
   semi_major_axis_km: Float
 }
 
+"""
+field for telemetry of type LaunchTelemetry
+"""
 type LaunchTelemetry {
   flight_club: String
 }
 
+"""
+fields for all ships of type Ship
+"""
 type Ship {
   abs: Int
   active: Boolean
@@ -933,25 +1167,40 @@ type Ship {
   year_built: Int
 }
 
+"""
+fields for missions of type ShipMission
+"""
 type ShipMission {
   flight: String
   name: String
 }
 
+"""
+fields for position of type ShipLocation
+"""
 type ShipLocation {
   latitude: Float
   longitude: Float
 }
 
+"""
+fields for historical events of type HistoriesResult
+"""
 type HistoriesResult {
   result: Result
   data: [History]
 }
 
+"""
+field for result of type Result
+"""
 type Result {
   totalCount: Int
 }
 
+"""
+fields for all landing pads of type Landpad
+"""
 type Landpad {
   attempted_landings: String
   details: String
@@ -964,6 +1213,9 @@ type Landpad {
   wikipedia: String
 }
 
+"""
+fields for location of type Location
+"""
 type Location {
   latitude: Float
   longitude: Float
@@ -971,6 +1223,9 @@ type Location {
   region: String
 }
 
+"""
+fields for finding information on all launches
+"""
 input LaunchFind {
   apoapsis_km: Float
   block: Int
@@ -1034,11 +1289,17 @@ input LaunchFind {
   tentative: String
 }
 
+"""
+fields for finding all past launch result information of type LaunchesPastResult
+"""
 type LaunchesPastResult {
   result: Result
   data: [Launch]
 }
 
+"""
+fields for finding information from all launchpads of type Launchpad
+"""
 type Launchpad {
   attempted_launches: Int
   details: String
@@ -1051,6 +1312,9 @@ type Launchpad {
   wikipedia: String
 }
 
+"""
+fields for find of input type MissionsFind
+"""
 input MissionsFind {
   id: ID
   manufacturer: String
@@ -1058,6 +1322,9 @@ input MissionsFind {
   payload_id: String
 }
 
+"""
+fields for finding all mission and data information of type Mission 
+"""
 type Mission {
   description: String
   id: ID
@@ -1069,11 +1336,17 @@ type Mission {
   payloads: [Payload]
 }
 
+"""
+fields for finding all missions result information of type MissionResult
+"""
 type MissionResult {
   result: Result
   data: [Mission]
 }
 
+"""
+fields for find for all payloads of input type PayloadsFind
+"""
 input PayloadsFind {
   apoapsis_km: Float
   customer: String
@@ -1098,6 +1371,9 @@ input PayloadsFind {
   semi_major_axis_km: Float
 }
 
+"""
+fields for finding current roadster data of type Roadster
+"""
 type Roadster {
   apoapsis_au: Float
   details: String
@@ -1125,11 +1401,17 @@ type Roadster {
   wikipedia: String
 }
 
+"""
+fields for finding all rocket result information of type RocketsResult
+"""
 type RocketsResult {
   result: Result
   data: [Rocket]
 }
 
+"""
+fields for find of input type ShipsFind
+"""
 input ShipsFind {
   id: ID
   name: String
@@ -1155,6 +1437,9 @@ input ShipsFind {
   mission: String
 }
 
+"""
+fields for all ship result information of type ShipsResult
+"""
 type ShipsResult {
   result: Result
   data: [Ship]
@@ -1354,6 +1639,9 @@ scalar whose value conforms to the mongodb object id format
 """
 scalar ObjectID
 
+"""
+fields for all core mission information of type CoreMission
+"""
 type CoreMission {
   name: String
   flight: Int
