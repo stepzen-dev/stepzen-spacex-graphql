@@ -1224,7 +1224,7 @@ type Location {
 }
 
 """
-fields for  finding information on all launches
+fields for finding information on all launches
 """
 input LaunchFind {
   apoapsis_km: Float
