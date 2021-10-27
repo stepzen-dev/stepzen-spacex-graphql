@@ -1,6 +1,6 @@
 .App {
-    text-align: center;
-   }
+  text-align: center;
+}
 
 .App-logo {
   height: 40vmin;
@@ -14,17 +14,16 @@
 }
 
 .App-header {
-  background-color: #19253F; 
+  background-color: #19253f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #DDD;
+  color: #ddd;
   padding: 1rem;
-  
- }
+}
 
 .App-link {
   color: #61dafb;
@@ -39,7 +38,39 @@
   }
 }
 
-.Data {
-    font-weight: bold;
-   
+.Title {
+  font-size: 22px;
+}
+
+.Description {
+  font-size: 18px;
+}
+
+.RocketsInformation {
+  display: block;
+  margin-top: 36px;
+  background-image: linear-gradient(92.88deg, #5643cc 25%, #9b7af7 75%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 5.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  text-decoration: none;
+}
+
+.RocketsInformation:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
 }
