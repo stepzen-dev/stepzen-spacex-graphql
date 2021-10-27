@@ -41,3 +41,11 @@ You'll need to add STEPZEN_API_KEY and STEPZEN_ENDPOINT in .env file in your wor
 The STEPZEN_API_KEY is the key from your account, and the STEPZEN_ENDPOINT is the endpoint you got when you ran `stepzen start`.
 
 Now, run `npm start` to see your Create React App user interface with your rocket information! Feel free to play around. [Let us know](https://discord.com/invite/9k2VdPn2FR) what you come up with!
+
+## Accessibility 
+Here at stepzen we are serious about accessibility and ensuring functionality and content to everyone! 
+We have many issues open for accessibility so feel free to claim one! If you find an accessibility issue we would love if you opened an issue and brought it to our attention so that we can continuously improve. 
+
+### What is accessibility? 
+Accessibility or A11y for short is an audit process for ensuring our website is accessible, this will be an ongoing effort as we roll out new features. According to the [A11y Project](https://www.a11yproject.com/) 1 in 4 people in the US have a disability, so building our websites with accesibility in mind allows for assistive technology like screenreaders and braille displays to be used.
+
